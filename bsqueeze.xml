@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" method="upgrade" group="system">
+	<name>Squeeze Page display on site entry</name>
+	<creationDate>January 2016</creationDate>
+	<version>1.0</version>
+	<author>Berthold</author>
+	<copyright>Copyright (C) 2016 All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<description>This plugin enables you to display a squeeze page to like the website Facebook page when a user enter the website</description>
+	<files>
+		<filename plugin="bsqueeze">bsqueeze.php</filename>
+		<filename>mobile_detect.php</filename>
+		<filename>index.html</filename>
+		<filename>reset.php</filename>
+		<folder>fields</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/bsqueeze/fields">
+			<fieldset name="basic">
+				<field name="system" type="reset" label="Reset" description="Reset the popup's timer for your web browser" default="squeezepage"/>
+				<field name="interval" type="text" label="Number of days before displaying again the popup" description="Number of days before displaying again the popup" default="7" size="3"/>
+				<field name="moduleid" type="text" required="true" label="Id of a module to display" description="Number associated to a module in the database" default="0" size="3"/>
+				<field name="delaytimer" type="text" label="Timer" description="Delay (in seconds) before showing the squeeze page" default="0"/>
+				<field name="hidetimer" type="text" label="Delay" description="Delay (in seconds) after the squeeze page is automatically hidden (0 = never hide automatically)" default="0"/>
+				<field name="boxwidth" type="text" size="5" default="250" label="SqueezePage width" description="Set the width of the box in this area" />
+				<field name="boxheight" type="text" size="5" default="200" label="SqueezePage height" description="Set the height of the box in this area" />
+				<field name="dispmobile" type="radio" default="1" label="Display on mobile" description="Do you want the squeezepage to be displayed on mobiles as well?">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

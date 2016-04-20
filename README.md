@@ -1,1 +1,1 @@
-# plg_system_bfacebooksqueeze
+# plg_system_bsqueeze
